@@ -1,11 +1,19 @@
 <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
-  <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4" >
-    <a 
+  <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4" *ngIf="tecnlogiaServicio.cargado">
+    <a *ngFor="let tecnologia of tecnlogiaServicio.tectnoList"
     href="#" class="rk-item ae-masonry__item">
-      <img src="assets/img/nodejs.jpg" alt="">
+      <img src="assets/img/{{tecnologia.img}}" alt="">
       <div class="item-meta">
-        <h2>Node JS</h2>
-        <p>60%</p>
+        <h2>{{tecnologia.nombre}}</h2>
+        <div class="progress-container">
+            <div  class="progressbar color-fodo" [ngStyle]="{'width':'tecnologia.porcentaje%'}">
+              <div class="color">{{tecnologia.porcentaje}}%</div>
+            </div>
+          </div>
+        <p>
+            
+          <progress max="100″ [value]="tecnologia.porcentaje ></progress>
+        </p>
       </div>
     </a>
   </div>
