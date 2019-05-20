@@ -6,7 +6,7 @@
       <img src="assets/img/trabajos/novasys.png" />
       <span class="item-meta">
         <h2>{{trabajo.nombre}}</h2>
-        <p>{{trabajo.fecha}}</p>
+        <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFinal}} <br>{{trabajo.tiempoTotal}}</p>
       </span>
     </a>
   </div>
@@ -19,13 +19,13 @@
   <div class="ae-grid__item item-lg-3"> 
     <p>Tecnologías</p>
     <ul>
-      <li *ngFor="let tecnologia of trabajo.tecnologias"><a href="#">{{tecnologia.nombre}}</a></li>
+      <li *ngFor="let tecnologia of trabajo.tecnologias"><a>{{tecnologia.nombre}}</a></li>
     </ul>
   </div>
   <div class="ae-grid__item item-lg-3"> 
     <p>Tecnologías</p>
     <ul>
-      <li *ngFor="let lenguaje of trabajo.lenguajes"><a href="#">{{lenguaje.nombre}}</a></li>
+      <li *ngFor="let lenguaje of trabajo.lenguajes"><a>{{lenguaje.nombre}}</a></li>
     </ul>
   </div>
   <!-- other columns... -->
