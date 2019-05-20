@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PerfilService } from '../../service/perfil.service';
+import { Perfil } from '../../interface/perfil.interface';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  perfil:Perfil;
+  constructor(private perfilService:PerfilService) { 
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.perfil= this.perfilService.perfil;
+    console.log(this.perfil);
   }
 
 }
