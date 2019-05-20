@@ -14,7 +14,7 @@ export class PerfilService {
     this.http.get("https://protafolio-64041.firebaseio.com/perfil.json")
     .subscribe((perfil:Perfil)=>{
       this.perfil = perfil;
-      console.log(this.perfil);
+     /*  console.log(this.perfil); */
     });
   }
 }

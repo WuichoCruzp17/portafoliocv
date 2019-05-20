@@ -1,3 +1,33 @@
-<p>
-  trabajos works!
-</p>
+<div *ngIf="trabajoService.trabajos">
+<div class="ae-grid" *ngFor="let trabajo of trabajoService.trabajos"> 
+  <!-- first column -->
+  <div class="ae-grid__item item-lg-3"> 
+    <a href="http://www.novasys.com.mx/portal/" class="rk-item">
+      <img src="assets/img/trabajos/novasys.png" />
+      <span class="item-meta">
+        <h2>{{trabajo.nombre}}</h2>
+        <p>{{trabajo.fecha}}</p>
+      </span>
+    </a>
+  </div>
+  <div class="ae-grid__item item-lg-3"> 
+    <p>Proyectos</p>
+    <ul>
+      <li *ngFor="let proyecto of trabajo.proyectos"><a target="_blank" [href]="proyecto.url">{{proyecto.nombre}}</a></li>
+    </ul>
+  </div>
+  <div class="ae-grid__item item-lg-3"> 
+    <p>Tecnologías</p>
+    <ul>
+      <li *ngFor="let tecnologia of trabajo.tecnologias"><a href="#">{{tecnologia.nombre}}</a></li>
+    </ul>
+  </div>
+  <div class="ae-grid__item item-lg-3"> 
+    <p>Tecnologías</p>
+    <ul>
+      <li *ngFor="let lenguaje of trabajo.lenguajes"><a href="#">{{lenguaje.nombre}}</a></li>
+    </ul>
+  </div>
+  <!-- other columns... -->
+</div>
+</div>
