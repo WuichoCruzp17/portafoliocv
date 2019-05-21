@@ -1,7 +1,7 @@
-<div class="ae-grid__item item-lg-12">
-    <h2 id="portfolio-items"><a href="#portfolio-items" class="hash-link">Tecnologías</a></h2>
+<div class="ae-grid__item item-lg-12 pointer"  (click)="ocultarMostrar($event);">
+    <h2 id="portfolio-items" ><a  class="hash-link">Tecnologías</a></h2>
 </div>
-<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
+<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio hidden" id="section-tecnologias">
   <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4" *ngIf="tecnlogiaServicio.cargado">
     <a *ngFor="let tecnologia of tecnlogiaServicio.tectnoList" href="#" class="rk-item ae-masonry__item">
       <img src="assets/img/{{tecnologia.img}}" alt="">
@@ -15,3 +15,14 @@
     </a>
   </div>
 </section>
+<script>
+  alert("Entro");
+  var $btnPortafolio = document.getElementById('portfolio-items');
+  $btnPortafolio.addEventListener('click',function(){
+    alert("Entro");
+    utilElements.toggle(document.getElementById('section-tecnologias'),'hidden');
+  });
+  function ocultarMostrar(){
+    utilElements.toggle(document.getElementById('section-tecnologias'),'hidden');
+  }
+</script>

@@ -2,10 +2,11 @@
 <div class="ae-grid" *ngFor="let trabajo of trabajoService.trabajos"> 
   <!-- first column -->
   <div class="ae-grid__item item-lg-3"> 
-    <a href="http://www.novasys.com.mx/portal/" class="rk-item">
+    <a  target="_blank" href="http://www.novasys.com.mx/portal/" class="rk-item">
       <img src="assets/img/trabajos/novasys.png" />
       <span class="item-meta">
         <h2>{{trabajo.nombre}}</h2>
+        <p>{{trabajo.puesto}}</p>
         <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFinal}} <br>{{trabajo.tiempoTotal}}</p>
       </span>
     </a>
@@ -13,7 +14,9 @@
   <div class="ae-grid__item item-lg-3"> 
     <p>Proyectos</p>
     <ul>
-      <li *ngFor="let proyecto of trabajo.proyectos"><a target="_blank" [href]="proyecto.url">{{proyecto.nombre}}</a></li>
+      <li *ngFor="let proyecto of trabajo.proyectos">
+        <a target="_blank" [href]="proyecto.url">{{proyecto.nombre}}</a>
+      </li>
     </ul>
   </div>
   <div class="ae-grid__item item-lg-3"> 
@@ -23,7 +26,7 @@
     </ul>
   </div>
   <div class="ae-grid__item item-lg-3"> 
-    <p>Tecnologías</p>
+    <p>Lenguajes</p>
     <ul>
       <li *ngFor="let lenguaje of trabajo.lenguajes"><a>{{lenguaje.nombre}}</a></li>
     </ul>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef  } from '@angular/core';
 import { TecnologiaService } from '../../service/tecnologia.service';
 import { Tecnologia } from '../../interface/tecnologia.interface';
 
@@ -9,7 +9,7 @@ import { Tecnologia } from '../../interface/tecnologia.interface';
 })
 export class HomeComponent implements OnInit {
   tecnologias:any;
-  constructor(private tecnlogiaServicio: TecnologiaService) {
+  constructor(private tecnlogiaServicio: TecnologiaService, private el:ElementRef) {
     this.getTecnologias();
    }
 
@@ -20,6 +20,19 @@ export class HomeComponent implements OnInit {
     this.tecnologias =[];
     this.tecnologias = this.tecnlogiaServicio.tectnoList;
     console.log("Llamadoo de S:  ",this.tecnologias);
+  }
+  /**
+   * Método para mostrar y ocultar las tecnologías.
+   * @param event 
+   */
+  ocultarMostrar(event:Event){
+    var $element = this.el.nativeElement.querySelector("#section-tecnologias");
+    if(!$element.classList.contains('hidden')){
+      $element.classList.add('hidden');
+    }else{
+      $element.classList.remove('hidden');
+    }
+
   }
 }
 /**
