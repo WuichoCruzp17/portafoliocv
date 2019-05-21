@@ -1,17 +1,17 @@
 <div *ngIf="trabajoService.trabajos">
 <div class="ae-grid" *ngFor="let trabajo of trabajoService.trabajos"> 
   <!-- first column -->
-  <div class="ae-grid__item item-lg-3"> 
+  <div class="ae-grid__item item-lg-2"> 
     <a  target="_blank" href="http://www.novasys.com.mx/portal/" class="rk-item">
-      <img src="assets/img/trabajos/novasys.png" />
+      <img src="assets/img/trabajos/novasys.png"  style="height: 171px;"/>
       <span class="item-meta">
-        <h2>{{trabajo.nombre}}</h2>
-        <p>{{trabajo.puesto}}</p>
-        <p>{{trabajo.fechaInicio}} - {{trabajo.fechaFinal}} <br>{{trabajo.tiempoTotal}}</p>
+        <h4>{{trabajo.nombre}}</h4>
+        <p class="funte-size">{{trabajo.puesto}}</p>
+        <p class="funte-size">{{trabajo.fechaInicio}} - {{trabajo.fechaFinal}} <br>{{trabajo.tiempoTotal}}</p>
       </span>
     </a>
   </div>
-  <div class="ae-grid__item item-lg-3"> 
+  <div class="ae-grid__item item-lg-2"> 
     <p>Proyectos</p>
     <ul>
       <li *ngFor="let proyecto of trabajo.proyectos">
@@ -19,17 +19,22 @@
       </li>
     </ul>
   </div>
-  <div class="ae-grid__item item-lg-3"> 
+  <div class="ae-grid__item item-lg-2"> 
     <p>Tecnologías</p>
     <ul>
       <li *ngFor="let tecnologia of trabajo.tecnologias"><a>{{tecnologia.nombre}}</a></li>
     </ul>
   </div>
-  <div class="ae-grid__item item-lg-3"> 
+  <div class="ae-grid__item item-lg-2"> 
     <p>Lenguajes</p>
     <ul>
       <li *ngFor="let lenguaje of trabajo.lenguajes"><a>{{lenguaje.nombre}}</a></li>
     </ul>
+  </div>
+  <div class="ae-grid__item item-lg-3"> 
+    <p>Funciones</p>
+    <p class="funte-size">{{trabajo.descripcion}}</p>
+    
   </div>
   <!-- other columns... -->
 </div>
