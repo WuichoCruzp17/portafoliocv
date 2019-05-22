@@ -48,3 +48,7 @@ to {
 -webkit-animation-name: fadeIn;
 animation-name: fadeIn;
 }
+
+.center-text{
+    text-align: center;
+}

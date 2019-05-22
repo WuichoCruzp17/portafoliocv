@@ -28,9 +28,13 @@ export class HomeComponent implements OnInit {
   ocultarMostrar(event:Event){
     var $element = this.el.nativeElement.querySelector("#section-tecnologias");
     if(!$element.classList.contains('hidden')){
-      $element.classList.add('hidden');
+      $element.classList.add('animated','bounceOutLeft');
+      setTimeout(function(){ $element.classList.add('hidden'); }, 500);
+      /* $element.classList.add('hidden'); */
     }else{
       $element.classList.remove('hidden');
+      $element.classList.remove('bounceOutLeft');
+      $element.classList.add('bounceInRight');
     }
 
   }

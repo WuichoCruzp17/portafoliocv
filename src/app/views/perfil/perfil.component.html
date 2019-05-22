@@ -29,20 +29,24 @@
   </div>
         </div>
   </div>
-    <div class="ae-grid ae-grid--collapse" *ngIf="perfilService.perfil" id="contenidoPefil">
-        <div class="ae-grid__item item-lg-1">
-        <img src="assets/img/perfil.png" class="img-perfil" height="100px" width="100px">
-        </div>
-        <div class=" item-lg-4">
+  
+    <div class="" *ngIf="perfilService.perfil" id="contenidoPefil">
+        <div class="item-inside__meta">
+            <img src="assets/img/perfil.png" class="img-perfil" height="100px" width="100px">
+            </div>
+        <div class="item-inside__meta">
           <h6>{{perfilService.perfil.nombre}}</h6>
           <p><b>Correo:</b> {{perfilService.perfil.correo}}
             <br>
             <b>Telefono:</b> {{perfilService.perfil.telefono}}
           </p>
         </div>
-        <div class="item-lg-5">
+        <div class="item-inside__meta">
           <h6>Objetivo</h6>
-          <p>{{perfilService.perfil.descripcion}}</p>
+          <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+              <p>{{perfilService.perfil.descripcion}}</p>
+          </div>
+          
         </div>
         </div> 
 </section>
