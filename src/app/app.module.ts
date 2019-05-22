@@ -20,8 +20,8 @@ import { PerfilComponent } from './views/perfil/perfil.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
