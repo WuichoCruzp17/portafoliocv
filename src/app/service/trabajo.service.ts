@@ -25,6 +25,8 @@ export class TrabajoService {
         if(diff>=365){
           trabajos[i].tiempoTotal = "1 año";
         }
+      }else{
+        trabajos[i].fechaFinal ="Actual"
       }
       return trabajos;
     }
