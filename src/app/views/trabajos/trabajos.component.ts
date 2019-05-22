@@ -8,7 +8,7 @@ import { TrabajoService } from '../../service/trabajo.service';
 })
 export class TrabajosComponent implements OnInit {
   trabajos:any;
-  constructor(private trabajoService:TrabajoService) {
+  constructor(public trabajoService:TrabajoService) {
   }
 
   ngOnInit() {

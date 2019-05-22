@@ -9,7 +9,7 @@ import { Tecnologia } from '../../interface/tecnologia.interface';
 })
 export class HomeComponent implements OnInit {
   tecnologias:any;
-  constructor(private tecnlogiaServicio: TecnologiaService, private el:ElementRef) {
+  constructor(public tecnlogiaServicio: TecnologiaService, private el:ElementRef) {
     this.getTecnologias();
    }
 
@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   getTecnologias(){
     this.tecnologias =[];
     this.tecnologias = this.tecnlogiaServicio.tectnoList;
-    console.log("Llamadoo de S:  ",this.tecnologias);
   }
   /**
    * Método para mostrar y ocultar las tecnologías.

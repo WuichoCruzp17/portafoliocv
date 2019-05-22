@@ -16,7 +16,6 @@ export class TecnologiaService {
     this.http.get('https://protafolio-64041.firebaseio.com/tecnologia.json')
     .subscribe((tecnologias:Tecnologia[])=>{
       this.tectnoList = tecnologias;
-      console.log(this.tectnoList);
       this.cargado =true;
     });
   }

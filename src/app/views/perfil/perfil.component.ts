@@ -8,7 +8,7 @@ import { PerfilService } from '../../service/perfil.service';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private perfilService:PerfilService,  private el:ElementRef) { }
+  constructor(public perfilService:PerfilService,  private el:ElementRef) { }
 
   ngOnInit() {
   }

@@ -9,7 +9,7 @@ import { Perfil } from '../../interface/perfil.interface';
 })
 export class HeaderComponent implements OnInit {
   perfil:Perfil;
-  constructor(private perfilService:PerfilService) { 
+  constructor(public perfilService:PerfilService) { 
 
   }
 
